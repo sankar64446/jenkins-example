@@ -19,5 +19,11 @@ pipeline {
                 echo 'Deploying'
             }
         }
+        stage('print') {
+            steps {
+                sh '''echo $JOB_NAME
+                echo "$JOB_NAME"'''
+            }
+        }
     }
 }
